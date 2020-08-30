@@ -27,7 +27,7 @@ class _DATABASE_:
             CREATE TABLE ChatDatabase (
                 SENT_CHAT TEXT,
                 RECIEVED_CHAT TEXT,
-                CHATS_TOTAL INT PRIMARY KEY NOT NULL
+                CHATS_TOTAL INT
             );
             ''')
 
