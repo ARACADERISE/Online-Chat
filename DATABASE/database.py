@@ -43,3 +43,4 @@ class _DATABASE_:
                 file.close()
     
     def _INSERT_(self, insertion_information):pass
+    def _RETURN_DB_(self): return self.Database
