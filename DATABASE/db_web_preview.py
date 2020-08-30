@@ -4,7 +4,7 @@ from database import _DATABASE_
 class BACKEND_PREVIEW:
 
     def __init__(self):
-        self.DB = _DATABASE_._RETURN_DB_()
+        self.DB = _DATABASE_._RETURN_DB_(self)
     
     def _run_(self): print('running')
 
