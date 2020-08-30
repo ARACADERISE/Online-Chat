@@ -1,10 +1,10 @@
 # Control/Have control on stuff going on within the website while the flask-server is running!
-from database import _DATABASE_
+import sqlite3
 
 class BACKEND_PREVIEW:
 
     def __init__(self):
-        self.DB = _DATABASE_._RETURN_DB_(self)
+        self.DB = sqlite3.connect('ChatDb.db')
     
     def _run_(self): print('running')
 
