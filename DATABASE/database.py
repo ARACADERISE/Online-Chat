@@ -25,9 +25,9 @@ class _DATABASE_:
         if not self.HasCreatedTable:
             self.Database.execute('''
             CREATE TABLE ChatDatabase (
-                SENT_CHAT TEXT NOT NULL,
-                RECIEVED_CHAR TEXT NOT NULL,
-                CHATS TOTAL INT PRIMARY KEY NOT NULL
+                SENT_CHAT TEXT,
+                RECIEVED_CHAT TEXT,
+                CHATS_TOTAL INT PRIMARY KEY NOT NULL
             );
             ''')
 
@@ -42,5 +42,9 @@ class _DATABASE_:
                 file.flush()
                 file.close()
     
-    def _INSERT_(self, insertion_information):pass
+    def _INSERT_(self, insertion_information):
+
+        self.Database.execute(insertion_information)
+        self.Database.commit()
+
     def _RETURN_DB_(self): return self.Database
