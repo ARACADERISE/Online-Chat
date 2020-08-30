@@ -7,7 +7,7 @@ class BACKEND_PREVIEW:
         self.DB = sqlite3.connect('ChatDb.db')
     
     def _run_(self): 
-        information = self.Db.execute('SELECT SENT_CHAT FROM ChatDatabase')
+        information = self.DB.execute('SELECT SENT_CHAT FROM ChatDatabase')
         print('running %s ' % information)
 
 BACK = BACKEND_PREVIEW()
